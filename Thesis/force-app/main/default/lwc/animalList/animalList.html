@@ -1,0 +1,53 @@
+<template>
+	<lightning-card title="Animals" icon-name="utility:animal_and_nature">
+		<div class="slds-card__body slds-card__body_inner">
+			<!-- Start animal list -->
+			<template if:true={animals.data}>
+                <lightning-input type="search"
+                    onchange={handleSearchTermChange}
+                    variant="label-hidden"
+                    class="slds-var-m-bottom_small"
+                    label="Search"
+                    placeholder="Search for animals"
+                    value={searchTerm}>
+                </lightning-input>
+				<lightning-layout multiple-rows="true" pull-to-boundary="small">
+					<template for:each={animals.data} for:item="animal">
+						<lightning-layout-item key={animal.Id} size="3" class="slds-var-p-around_x-small">
+							<!-- Start animal tile -->
+							<lightning-card title={animal.Name} class="animal-tile">
+								<div class="slds-var-p-horizontal_small animal-tile-body">
+									<div class="slds-media">
+										<div class="slds-media__figure">
+											<img src={appResources.bearSilhouette} alt="Animal profile" class="animal-silhouette"/>
+										</div>
+										<div class="slds-media__body">
+											<p class="slds-var-m-bottom_xx-small">{animal.Sex__c}</p>
+											<p class="slds-var-m-bottom_xx-small">{animal.Age__c} years old</p>
+											<p class="slds-var-m-bottom_xx-small">{animal.Height__c} cm</p>
+											<p class="slds-var-m-bottom_xx-small">{animal.Weight__c} Kg</p>
+										</div>
+									</div>
+								</div>
+							</lightning-card>
+							<!-- End animal tile -->
+						</lightning-layout-item>
+					</template>
+				</lightning-layout>
+                <!-- No bears found -->
+                <template if:false={hasResults}>
+                    <div class="slds-align_absolute-center slds-var-m-vertical_small">
+                        This is beary disturbing, we did not find results...
+                    </div>
+                </template>
+			</template>
+			<!-- End animal list -->
+			<!-- Data failed to load -->
+			<template if:true={animals.error}>
+				<div class="slds-text-color_error">
+					An error occurred while loading the animal list
+				</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>

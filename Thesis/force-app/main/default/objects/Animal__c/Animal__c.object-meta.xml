@@ -154,12 +154,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Zwierzę</label>
+    <label>Animal</label>
     <nameField>
         <label>Imię</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Zwierząta</pluralLabel>
+    <pluralLabel>Animals</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
