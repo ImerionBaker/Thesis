@@ -141,29 +141,25 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>Animal_compact_layout</compactLayoutAssignment>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Main class for the description of the animal</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>false</enableReports>
+    <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
-    <label>Animal</label>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Medical examination</label>
     <nameField>
-        <label>Imię</label>
+        <label>Medical examination name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Animals</pluralLabel>
-    <searchLayouts>
-        <searchResultsAdditionalFields>KindAnimal__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Age__c</searchResultsAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <pluralLabel>Medical examinations</pluralLabel>
+    <searchLayouts></searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

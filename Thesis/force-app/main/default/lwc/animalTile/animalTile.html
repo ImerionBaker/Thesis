@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title={animal.Name} class="animal-tile">
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:search"
+                icon-class="animal-tile-button"
+                variant="bare"
+                alternative-text="Open record"
+                onclick={handleOpenRecordClick}>
+            </lightning-button-icon>
+        </div>
+        <div class="slds-var-p-horizontal_small animal-tile-body">
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <img src={appResources.animalSilhouette} alt="Animal profile" class="animal-silhouette"/>
+                </div>
+                <div class="slds-media__body">
+                    <p class="slds-var-m-bottom_xx-small">{animal.Sex__c}</p>
+                    <p class="slds-var-m-bottom_xx-small">{animal.Age__c} years old</p>
+                    <p class="slds-var-m-bottom_xx-small">{animal.Height__c} cm</p>
+                    <p class="slds-var-m-bottom_xx-small">{animal.Weight__c} Kg</p>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

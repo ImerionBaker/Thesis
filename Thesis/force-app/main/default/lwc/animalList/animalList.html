@@ -11,25 +11,35 @@
                     placeholder="Search for animals"
                     value={searchTerm}>
                 </lightning-input>
+				
+				<!-- color picklist -->
+
+				<div class="slds-form-element">
+					<label class="slds-form-element__label">
+						<!-- <template if:true={isAttributeRequired}>
+							<abbr title="required">*</abbr>
+						</template> -->
+						<span class="">Color</span>
+					</label>
+					<div class="slds-form-element__control">
+						<div class="slds-select_container">
+							<select class="slds-select" onchange={selectionChangeHandler} >
+								<option value="Select">Select</option>
+								<template for:each={colorOptions} for:item="option">
+									<option key={option.label} class="uiInputSelectOption" value={option.value}>{option.value}</option>
+								</template>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- ==================== -->
+
 				<lightning-layout multiple-rows="true" pull-to-boundary="small">
 					<template for:each={animals.data} for:item="animal">
 						<lightning-layout-item key={animal.Id} size="3" class="slds-var-p-around_x-small">
 							<!-- Start animal tile -->
-							<lightning-card title={animal.Name} class="animal-tile">
-								<div class="slds-var-p-horizontal_small animal-tile-body">
-									<div class="slds-media">
-										<div class="slds-media__figure">
-											<img src={appResources.bearSilhouette} alt="Animal profile" class="animal-silhouette"/>
-										</div>
-										<div class="slds-media__body">
-											<p class="slds-var-m-bottom_xx-small">{animal.Sex__c}</p>
-											<p class="slds-var-m-bottom_xx-small">{animal.Age__c} years old</p>
-											<p class="slds-var-m-bottom_xx-small">{animal.Height__c} cm</p>
-											<p class="slds-var-m-bottom_xx-small">{animal.Weight__c} Kg</p>
-										</div>
-									</div>
-								</div>
-							</lightning-card>
+							<c-animal-tile animal={animal} onanimalview={handleAnimalView}></c-animal-tile>
 							<!-- End animal tile -->
 						</lightning-layout-item>
 					</template>
@@ -37,7 +47,7 @@
                 <!-- No bears found -->
                 <template if:false={hasResults}>
                     <div class="slds-align_absolute-center slds-var-m-vertical_small">
-                        This is beary disturbing, we did not find results...
+                        This is animal disturbing, we did not find results...
                     </div>
                 </template>
 			</template>
