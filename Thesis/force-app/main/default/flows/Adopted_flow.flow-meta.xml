@@ -2,60 +2,24 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
     <assignments>
-        <name>Set_status</name>
-        <label>Set status</label>
+        <name>Assign_variables</name>
+        <label>Assign variables</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
         <assignmentItems>
             <assignToReference>Get_animal.AnimalAdaptationStatus__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Waiting for adaptation</stringValue>
+                <stringValue>Adapted</stringValue>
             </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.PetOwnerFirstName__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.PetOwnerLastName__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.PetOwnerEmail__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.PetOwnerPhone__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.AdoptationStartDate__c</assignToReference>
-            <operator>Assign</operator>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Get_animal.AdoptationalEndDate__c</assignToReference>
-            <operator>Assign</operator>
         </assignmentItems>
         <connector>
             <targetReference>Update_animal</targetReference>
         </connector>
     </assignments>
     <environments>Default</environments>
-    <interviewLabel>Reject {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Reject adaptation</label>
+    <interviewLabel>Adopted flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Adopted flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -82,7 +46,7 @@
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Reject</targetReference>
+            <targetReference>Adopted</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -104,21 +68,20 @@
         <inputReference>Get_animal</inputReference>
     </recordUpdates>
     <screens>
-        <name>Reject</name>
-        <label>Reject</label>
+        <name>Adopted</name>
+        <label>Adopted</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Set_status</targetReference>
+            <targetReference>Assign_variables</targetReference>
         </connector>
         <fields>
-            <name>Comment</name>
-            <fieldText>Comment</fieldText>
-            <fieldType>LargeTextArea</fieldType>
-            <isRequired>false</isRequired>
+            <name>SuccessScreen</name>
+            <fieldText>&lt;p&gt;Successful!&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>

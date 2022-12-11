@@ -8,6 +8,33 @@
                     <valueList>
                         <valueListItems>
                             <value>Animal__c.UnderConsideration</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.AnimalAdaptationStatus__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Waiting for adaptation</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Animal__c.Start_adoptional_process</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.AnimalAdaptationStatus__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Under consideration</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Animal__c.Adopted</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.AnimalAdaptationStatus__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>In the process of adaptation</rightValue>
+                                </criteria>
+                            </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Animal__c.RejectAdoptationAction</value>
@@ -80,6 +107,14 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>parentFieldApiName</name>
+                    <value>Animal__c.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListApiName</name>
+                    <value>Medical_examinations__r</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
                 </componentInstanceProperties>
@@ -91,8 +126,8 @@
                     <name>showActionBar</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <componentName>force:relatedListContainer</componentName>
-                <identifier>force_relatedListContainer</identifier>
+                <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-0c9955d0-2b3e-44f5-9ad5-12dee01751f3</name>
@@ -103,6 +138,32 @@
             <componentInstance>
                 <componentName>adaptationForm</componentName>
                 <identifier>c_adaptationForm</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>parentFieldApiName</name>
+                    <value>Animal__c.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListApiName</name>
+                    <value>AttachedContentDocuments</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>relatedListComponentOverride</name>
+                    <value>NONE</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>rowsToDisplay</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showActionBar</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-31d16b47-63d1-400f-ab42-3bff3a619e72</name>

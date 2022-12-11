@@ -61,6 +61,12 @@
                 <identifier>force_detailPanel</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>map</componentName>
+                <identifier>c_map</identifier>
+            </componentInstance>
+        </itemInstances>
         <mode>Replace</mode>
         <name>detailTabContent</name>
         <type>Facet</type>

@@ -20,6 +20,41 @@
                 <elementReference>$Flow.CurrentDate</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_animal.PetOwnerFirstName__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>First_name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_animal.PetOwnerLastName__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Last_name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_animal.PetOwnerEmail__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Email.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_animal.PetOwnerPhone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PhoneNumber.value</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_animal.PetOwnerAddress__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Address</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Update_animal</targetReference>
         </connector>
@@ -114,6 +149,13 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Address</name>
+            <dataType>String</dataType>
+            <fieldText>Address</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
