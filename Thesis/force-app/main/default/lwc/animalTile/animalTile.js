@@ -1,5 +1,6 @@
 import { LightningElement, api, wire, track } from 'lwc';
 import animalResources from '@salesforce/resourceUrl/animal_shelter';
+import { getDataConnectorSourceFields } from 'lightning/analyticsWaveApi';
 
 export default class AnimalTile extends LightningElement {
 	@api animal;

@@ -43,6 +43,10 @@
                 <behavior>Edit</behavior>
                 <field>Supervisor__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>AnimalMedicalCost__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -135,6 +139,9 @@
         <fields>RECORDTYPE</fields>
         <fields>ExaminationDate__c</fields>
         <relatedList>MedicalExamination__c.Animal__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

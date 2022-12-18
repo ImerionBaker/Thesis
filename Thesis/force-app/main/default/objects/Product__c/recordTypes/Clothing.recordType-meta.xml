@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clothing</fullName>
+    <active>true</active>
+    <label>Clothing</label>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>grams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>kilograms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>liters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>miligrams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>milliliters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>piece</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

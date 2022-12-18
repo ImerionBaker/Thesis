@@ -8,7 +8,7 @@ public with sharing class AnimalController {
 
     @AuraEnabled(cacheable=true scope='global')
     public static Animal__c[] searchAnimals(String searchTerm, String color) {
-        // Return all bears when no search term
+        // Return all animals when no search term
         String query = '';
         searchTerm = searchTerm.trim();
         if (searchTerm == '' || color == 'Select') {

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Supervisor__c</fullName>
+    <fullName>Shelter__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Supervisor</label>
-    <referenceTo>User</referenceTo>
-    <relationshipName>Animals</relationshipName>
+    <label>Shelter</label>
+    <referenceTo>Shelter__c</referenceTo>
+    <relationshipLabel>Deliveries</relationshipLabel>
+    <relationshipName>Deliveries</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
