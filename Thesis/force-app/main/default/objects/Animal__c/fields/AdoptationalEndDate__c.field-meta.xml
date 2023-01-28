@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>AdoptationalEndDate__c</fullName>
     <externalId>false</externalId>
-    <label>Planned adoptational end date</label>
+    <label>Planned adoption end date</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Date</type>

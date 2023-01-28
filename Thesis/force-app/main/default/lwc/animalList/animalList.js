@@ -1,39 +1,16 @@
-
-//TODO when change record card must be refreshed
-
 import { NavigationMixin } from 'lightning/navigation';
 import { LightningElement, wire, api } from 'lwc';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 import COLOR_FILED from '@salesforce/schema/Animal__c.Color__c';
 
-/** BearController.searchBears(searchTerm) Apex method */
 import searchAnimals from '@salesforce/apex/AnimalController.searchAnimals';
 
 export default class animalList extends NavigationMixin(LightningElement) {
 	@api recordId;
-
 	searchTerm = '';
-	colorOptions = [];
-	selectedColor = 'Select';
 
-	@wire(searchAnimals, {searchTerm: '$searchTerm', color: '$selectedColor'})
+	@wire(searchAnimals, {searchTerm: '$searchTerm'})
 	animals;
-
-
-
-	//get color of animal record type picklist
-	@wire(getPicklistValues, { recordTypeId: '0127Q000000ywLlQAI', fieldApiName: COLOR_FILED })
-	wiredColors({error, data}) {
-		if (data){
-			this.colorOptions = data.values;
-			this.error = undefined;
-			console.log(data.values);
-		} else{
-			this.colorOptions = undefined;
-			this.error = error;
-			console.log(error);
-		}
-	}
 
 	selectionChangeHandler(event){
 		window.clearTimeout(this.delayTimeout);
@@ -50,7 +27,7 @@ export default class animalList extends NavigationMixin(LightningElement) {
 		// This is to avoid a very large number of Apex method calls.
 		window.clearTimeout(this.delayTimeout);
 		const searchTerm = event.target.value;
-		// eslint-disable-next-line @lwc/lwc/no-async-operation
+
 		this.delayTimeout = setTimeout(() => {
 			this.searchTerm = searchTerm;
 		}, 300);

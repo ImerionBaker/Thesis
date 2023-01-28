@@ -14,7 +14,7 @@
             <value>
                 <fullName>Waiting for adaptation</fullName>
                 <default>true</default>
-                <label>Waiting for adaptation</label>
+                <label>Waiting for adoption</label>
             </value>
             <value>
                 <fullName>Under consideration</fullName>
@@ -24,12 +24,12 @@
             <value>
                 <fullName>In the process of adaptation</fullName>
                 <default>false</default>
-                <label>In the process of adaptation</label>
+                <label>In the process of adoption</label>
             </value>
             <value>
                 <fullName>Adapted</fullName>
                 <default>false</default>
-                <label>Adapted</label>
+                <label>Adopted</label>
             </value>
         </valueSetDefinition>
     </valueSet>

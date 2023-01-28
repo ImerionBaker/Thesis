@@ -1,11 +1,11 @@
 :host {
-	--sds-c-card-color-background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #fae8d2 100%);
+	--sds-c-card-color-background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #c5e7f7 100%);
 }
 .animal-tile {
 	display: block;
-	border: 1px solid #d2955d;
+	border: 1px solid #5d80d2;
 	border-radius: .25rem;
-	background-color: #fae8d2;
+	background-color: #c5e7f7;
 }
 .animal-silhouette {
 	height: 100px;

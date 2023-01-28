@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MedicalExmainationDateValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>NextExaminationDate__c &lt;  ExaminationDate__c</errorConditionFormula>
+    <errorDisplayField>NextExaminationDate__c</errorDisplayField>
+    <errorMessage>The next medical examination date cannot be earlier than the first</errorMessage>
+</ValidationRule>

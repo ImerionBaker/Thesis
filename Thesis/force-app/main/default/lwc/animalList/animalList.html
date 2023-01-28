@@ -11,29 +11,6 @@
                     placeholder="Search for animals"
                     value={searchTerm}>
                 </lightning-input>
-				
-				<!-- color picklist -->
-
-				<div class="slds-form-element">
-					<label class="slds-form-element__label">
-						<!-- <template if:true={isAttributeRequired}>
-							<abbr title="required">*</abbr>
-						</template> -->
-						<span class="">Color</span>
-					</label>
-					<div class="slds-form-element__control">
-						<div class="slds-select_container">
-							<select class="slds-select" onchange={selectionChangeHandler} >
-								<option value="Select">Select</option>
-								<template for:each={colorOptions} for:item="option">
-									<option key={option.label} class="uiInputSelectOption" value={option.value}>{option.value}</option>
-								</template>
-							</select>
-						</div>
-					</div>
-				</div>
-
-				<!-- ==================== -->
 
 				<lightning-layout multiple-rows="true" pull-to-boundary="small">
 					<template for:each={animals.data} for:item="animal">
@@ -44,7 +21,7 @@
 						</lightning-layout-item>
 					</template>
 				</lightning-layout>
-                <!-- No bears found -->
+                <!-- No animals found -->
                 <template if:false={hasResults}>
                     <div class="slds-align_absolute-center slds-var-m-vertical_small">
                         This is animal disturbing, we did not find results...

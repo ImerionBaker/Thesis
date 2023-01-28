@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DogsListView</fullName>
+    <columns>NAME</columns>
+    <columns>AnimalAdaptationStatus__c</columns>
+    <columns>Age__c</columns>
+    <columns>Breed__c</columns>
+    <columns>Color__c</columns>
+    <columns>Weight__c</columns>
+    <columns>Height__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>KindAnimal__c</field>
+        <operation>equals</operation>
+        <value>Dog</value>
+    </filters>
+    <label>Dogs</label>
+</ListView>
