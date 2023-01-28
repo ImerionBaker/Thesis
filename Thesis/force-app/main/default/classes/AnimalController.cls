@@ -21,6 +21,7 @@ public with sharing class AnimalController {
 
         // Prepare query paramters
         searchTerm = '%' + searchTerm + '%';
+        String resultQuery = 'SELECT Id, Name FROM Animal__c WHERE Name LIKE \''+ searchTerm + '\'' + ' ORDER BY Name';
 
         String resultQuery = 'SELECT Id, Name, Age__c, Sex__c, Height__c, Weight__c, KindAnimal__c, Color__c FROM Animal__c WHERE Name LIKE \''+ searchTerm + '\'' + query +' ORDER BY Name';
 
